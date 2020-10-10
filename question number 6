@@ -1,0 +1,4 @@
+n=100#number of values
+sum_of_nSquare=n*(n+1)*(2*n+1)/6
+Square_of_sum_of_n=(n*(n+1)/2)**2
+print(-sum_of_nSquare+Square_of_sum_of_n)
