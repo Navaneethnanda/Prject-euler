@@ -1,0 +1,16 @@
+def check(x):
+    x=str(x)
+    x=list(x)
+    y=x.copy()
+    x.reverse()
+    if y==x:
+        return True
+    return False
+
+
+
+for x in range(999,99,-1):
+    for y in range(999,99,-1):
+        if check(x*y):
+            print(x*y)
+            
