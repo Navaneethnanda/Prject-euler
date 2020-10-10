@@ -8,9 +8,10 @@ def check(x):
     return False
 
 
-
+append=[]
 for x in range(999,99,-1):
     for y in range(999,99,-1):
         if check(x*y):
-            print(x*y)
+            append.append(x*y)
             
+print(max(append))
