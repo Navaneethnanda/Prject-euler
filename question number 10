@@ -1,0 +1,44 @@
+#brute force method
+
+import math
+def isprime(x):
+    c=0
+    for i in range(2,math.ceil(math.sqrt(x))+1):
+        if x%i==0:
+            c+=1
+            return False           
+    if c==0:
+        return True
+    return False
+    
+summ=5#2+3
+n=1
+q=n*6
+while q-1<=2000000:
+    if isprime(q+1):
+        summ+=q+1
+    if isprime(q-1):
+        summ+=q-1
+    n+=1
+    q=6*n
+        
+print(summ)
+        
+        
+    #optimal solution - sieve of eratosthenes
+
+import math
+N=2000000
+arr=[True]*(N+1)
+arr[0]=False
+arr[1]=False
+summ=0
+for x in range(2000000+1):
+    if arr[x]==False:
+        continue
+    summ+=x
+    for y in range(x**2,2000000+1,x):
+        arr[y]=False
+        
+print(summ)
+        
